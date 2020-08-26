@@ -7,16 +7,12 @@
             <h1><a href="/">NXS676's Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 25.08.2020, 22:49</p>
-            <h2><a href="">Learning During a Global Pandemic</a></h2>
-            <p>No content yet.</p>
-        </div>
-
-        <div>
-            <p>published: 25.08.2020, 22:49</p>
-            <h2><a href="">My second post</a></h2>
-            <p>No content yet.</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
