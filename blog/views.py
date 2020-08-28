@@ -51,4 +51,4 @@ def post_remove(request, pk):
 
 
 def cv(request):
-    return HttpResponse('<html><title>CV</title></html>')
+    return render(request, 'blog/cv.html')
