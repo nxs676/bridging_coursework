@@ -6,5 +6,5 @@ from blog.views import cv
 class CVTest(TestCase):
 
     def test_root_url_resolves_to_cv_view(self):
-        found = resolve('/')
+        found = resolve('/cv.html')
         self.assertEqual(found.func, cv)

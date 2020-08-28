@@ -10,5 +10,6 @@ urlpatterns = [
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
     path('homepage.html', views.post_list, name='post_list'),
-    path('about.html', TemplateView.as_view(template_name="blog/about.html"))
+    path('about.html', TemplateView.as_view(template_name="blog/about.html")),
+    path('cv.html', views.cv, name='CV')
 ]
