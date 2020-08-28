@@ -11,7 +11,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.quit()
 
     def test_can_create_a_CV_and_edit_later(self):
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000/cv.html')
 
         self.assertIn('CV', self.browser.title)
         self.fail('Finish the test!')
