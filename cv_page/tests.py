@@ -4,7 +4,7 @@ from django.urls import resolve
 from cv_page.views import cv
 
 
-class HomePageTest(TestCase):
+class CVPageTest(TestCase):
 
     def test_root_url_resolves_to_cv_view(self):
         found = resolve('/cv.html')
