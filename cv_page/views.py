@@ -1,7 +1,8 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
 def cv(request):
-    return render(request, '/cv.html')
+    return render(request, 'cv.html')
 
 
