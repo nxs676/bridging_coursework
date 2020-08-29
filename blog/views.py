@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
@@ -50,5 +49,3 @@ def post_remove(request, pk):
     return redirect('post_list')
 
 
-def cv(request):
-    return render(request, 'blog/cv.html')
