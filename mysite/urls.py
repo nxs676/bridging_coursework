@@ -20,5 +20,5 @@ from cv_page import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
-    path('cv.html', views.cv, name='CV')
+    path('cv', views.cv_detail, name='CV'),
 ]

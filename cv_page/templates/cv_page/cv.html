@@ -1,0 +1,10 @@
+{% extends 'blog/index.html' %}
+{% load static %}
+{% block image %}url('{% static 'img/cv-bg.jpg' %}'){% endblock %}
+{% block title %} CV {% endblock %}
+{% block subhead %} {% endblock %}
+{% block content %}
+        <div class="cv">
+            {{ cv.phone }}
+        </div>
+{% endblock %}
