@@ -4,7 +4,27 @@
 {% block title %} CV {% endblock %}
 {% block subhead %} {% endblock %}
 {% block content %}
-        <div class="cv">
-            {{ cv.phone }}
-        </div>
+    <div class="cv">
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'cv_edit' pk=cv.pk %}"><span
+                    class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <p style="text-align:left">
+        <strong>Name:</strong> {{ cv.name }}
+        <hr>
+        <strong>Address:</strong> {{ cv.address }}
+        <hr>
+        <strong>Contact number:</strong> {{ cv.phone }}
+        <hr>
+        <strong>Email:</strong> {{ cv.email }}
+        <hr>
+        <strong>Profile:</strong> {{ cv.summary }}
+        <hr>
+        <strong>Education:</strong> {{ cv.education | linebreaks }}
+        <hr>
+        <strong>Skills:</strong> {{ cv.skills | linebreaks }}
+        <hr>
+        <strong>Previous jobs:</strong> {{ cv.jobs | linebreaks }}
+        </p>
+    </div>
 {% endblock %}

@@ -3,7 +3,7 @@ from django.db import models
 
 
 class CV(models.Model):
-    name = models.CharField(max_length=100, editable=True)
+    name = models.CharField(max_length=100)
     address = models.CharField(max_length=300)
     phone = models.CharField(max_length=50)
 

@@ -6,5 +6,5 @@ class CVForm(forms.ModelForm):
 
     class Meta:
         model = CV
-        fields = ('name', 'address', 'phone', 'email', 'summary', 'skills', 'education', 'jobs')
+        fields = ('address', 'phone', 'email', 'summary', 'skills', 'education', 'jobs')
 

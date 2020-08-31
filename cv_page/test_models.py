@@ -9,17 +9,17 @@ class CVModelTest(TestCase):
                           skills='skills', education='education', jobs='jobs')
 
     def test_name_max_length(self):
-        cv = CV.objects.get(id=1)
+        cv = CV.objects.get()
         max_length = cv._meta.get_field('name').max_length
         self.assertEquals(max_length, 100)
 
     def test_address_max_length(self):
-        cv = CV.objects.get(id=1)
+        cv = CV.objects.get()
         max_length = cv._meta.get_field('address').max_length
         self.assertEquals(max_length, 300)
 
     def test_phone_max_length(self):
-        cv = CV.objects.get(id=1)
+        cv = CV.objects.get()
         max_length = cv._meta.get_field('phone').max_length
         self.assertEquals(max_length, 50)
 
