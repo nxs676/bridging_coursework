@@ -1,10 +1,8 @@
-import time
 from selenium import webdriver
 import unittest
-from selenium.webdriver.common.keys import Keys
 
 
-class NewVisitorTest(unittest.TestCase):
+class NikolTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()

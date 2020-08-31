@@ -14,7 +14,6 @@ class CVModelTest(TestCase):
         self.assertTrue(isinstance(cv, CV))
         self.assertEqual(cv.__str__(), cv.name)
 
-
     def test_name_max_length(self):
         cv = CV.objects.get()
         max_length = cv._meta.get_field('name').max_length
